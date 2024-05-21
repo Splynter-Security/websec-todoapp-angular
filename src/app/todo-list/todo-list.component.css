@@ -1,0 +1,22 @@
+.main-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.wrapper {
+    width: 50%;
+}
+
+.remove-button {
+    margin-left: 1rem;
+}
+
+label {
+    margin-right: 1rem;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+}

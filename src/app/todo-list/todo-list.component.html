@@ -1,0 +1,24 @@
+<div>
+    <h1>Todo List</h1>
+    <div class="wrapper">
+      <form (ngSubmit)="addTodo()" class="main-form">
+        <div>
+          <label for="description">Description</label>
+          <input type="text" id="description" [(ngModel)]="newTodo.description" name="description" required>
+        </div>
+        <div>
+          <label for="url">URL</label>
+          <input type="url" id="url" [(ngModel)]="newTodo.url" name="url" required>
+        </div>
+        <button type="submit">Add Todo</button>
+      </form>
+      
+      <ul>
+        <li *ngFor="let todo of todos">
+          <a [href]="todo.url">{{ todo.description }}</a>
+          <button (click)="removeTodo(todo)" class="remove-button">X</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
